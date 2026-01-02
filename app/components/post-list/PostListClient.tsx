@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import styles from './PostList.module.css';
 import { PostInfo } from '../../lib/posts';
+import styles from './PostList.module.css';
 
 interface PostListClientProps {
   posts: PostInfo[];

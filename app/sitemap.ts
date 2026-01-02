@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getPostIds, getAllPostsMetadata } from './lib/posts';
+import { getAllPostsMetadata, getPostIds } from './lib/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://siojeong.com';
