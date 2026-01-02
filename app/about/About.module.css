@@ -1,0 +1,14 @@
+.aboutContainer h2 {
+  font-weight: 400;
+}
+
+.aboutContainer li {
+  margin-bottom: 10px;
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,70 @@
+.markdownRenderer p {
+  line-height: 150%;
+}
+
+.heading2 {
+  margin-top: 4rem;
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+.heading3 {
+  margin-top: 3rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.unorderedList {
+  padding: 0;
+}
+
+.orderedList {
+  padding: 0;
+}
+
+.list {
+  margin-bottom: 0.4rem;
+  margin-left: 1rem;
+}
+
+.codeBlock {
+  margin-bottom: 4rem;
+}
+
+.codeBlockTitle {
+  color: #111827;
+}
+
+.codeBlockTitle:hover {
+  cursor: pointer;
+}
+
+.inlineCode {
+  background-color: #111827;
+  color: #ffffff;
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 1rem 0;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .codeContainer code {
+    font-size: 10px !important;
+  }
+
+  .heading2,
+  .heading3 {
+    font-size: 1.3rem;
+  }
+}

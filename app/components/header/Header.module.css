@@ -1,0 +1,23 @@
+/* Header.module.css */
+.container {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.navList {
+  gap: 1.5rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navList li a {
+  color: #111827;
+  font-weight: normal;
+}
+
+.navList li a.activeLink {
+  font-weight: 800;
+}
