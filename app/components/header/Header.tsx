@@ -21,10 +21,12 @@ export default function Header() {
           </li>
           <li>
             <Link
-              href="/about"
-              className={pathname === '/about' ? styles.activeLink : undefined}
+              href="/articles"
+              className={
+                pathname === '/articles' ? styles.activeLink : undefined
+              }
             >
-              about
+              articles
             </Link>
           </li>
         </ul>

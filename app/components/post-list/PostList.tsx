@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import { PostInfo } from '../../lib/posts';
+import PostDate from '../post-date/PostDate';
 import styles from './PostList.module.css';
 
-interface PostListClientProps {
+interface PostListProps {
   posts: PostInfo[];
 }
 
-export default function PostListClient({ posts }: PostListClientProps) {
+export default function PostList({ posts }: PostListProps) {
   return (
     <main>
       <ul className={styles.postList}>
@@ -18,6 +19,7 @@ export default function PostListClient({ posts }: PostListClientProps) {
               <Link href={`/post/${id}`} className={styles.postTitle}>
                 {title}
               </Link>
+              <PostDate date={date} className={styles.postDate} />
             </article>
           </li>
         ))}

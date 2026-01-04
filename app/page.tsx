@@ -1,8 +1,5 @@
-import PostListClient from './components/post-list/PostListClient';
-import { getAllPostsMetadata } from './lib/posts';
+import About from './components/about/About';
 
-export default async function Home() {
-  const posts = await getAllPostsMetadata();
-
-  return <PostListClient posts={posts} />;
+export default function Home() {
+  return <About />;
 }

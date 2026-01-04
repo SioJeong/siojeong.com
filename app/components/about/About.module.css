@@ -12,3 +12,19 @@
   gap: 20px;
   margin-bottom: 40px;
 }
+
+.introSection {
+  line-height: 1.8;
+}
+
+.introSection p {
+  margin-bottom: 1.5em;
+}
+
+.introSection p:last-child {
+  margin-bottom: 0;
+}
+
+.introSection strong {
+  font-weight: 600;
+}

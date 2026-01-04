@@ -8,7 +8,7 @@ export default function Footer() {
   const pathname = usePathname();
 
   // about 페이지에서는 Footer 숨김 처리
-  if (pathname === '/about') return null;
+  if (pathname === '/') return null;
 
   return (
     <footer>
