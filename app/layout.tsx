@@ -5,15 +5,15 @@ import Header from './components/header/Header';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jeongsangyoung.dev'),
-  title: 'motto',
+  metadataBase: new URL('https://siojeong.com'),
+  title: 'Sio Jeong',
   description: 'Product Maker 정상영의 블로그',
   authors: [{ name: 'Sio Jeong' }],
   openGraph: {
     type: 'website',
-    title: 'motto',
+    title: 'Sio Jeong',
     description: 'Product Maker 정상영의 블로그',
-    url: 'https://jeongsangyoung.dev/',
+    url: 'https://siojeong.com/',
     images: [
       {
         url: '/Symbol.svg',
