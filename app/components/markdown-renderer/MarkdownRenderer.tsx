@@ -43,7 +43,7 @@ const MarkdownRenderer = ({ markdown }: MarkdownRendererProps) => {
                 width={800}
                 height={600}
                 className={styles.image}
-                loading="lazy"
+                loading="eager"
               />
             );
           },
