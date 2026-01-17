@@ -3,7 +3,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import MarkdownRenderer from '../../components/markdown-renderer/MarkdownRenderer';
 import PostDate from '../../components/post-date/PostDate';
-import { getPostContent, getPostIds } from '../../lib/posts';
+import SeriesList from '../../components/series-list/SeriesList';
+import {
+  getPostContent,
+  getPostIds,
+  getSeriesPostsMetadata,
+} from '../../lib/posts';
 import styles from './PostDetail.module.css';
 
 export async function generateStaticParams() {
@@ -55,6 +60,8 @@ export default async function PostDetail({
     notFound();
   }
 
+  const seriesPosts = post.series ? getSeriesPostsMetadata(post.series) : [];
+
   return (
     <main>
       <header>
@@ -69,6 +76,9 @@ export default async function PostDetail({
           <PostDate date={post.date} className={styles.postDate} />
         </div>
         <h1 className={styles.postHeader}>{post.title}</h1>
+        {seriesPosts.length > 1 && (
+          <SeriesList posts={seriesPosts} currentPostId={post.id} />
+        )}
       </header>
       <article>
         <MarkdownRenderer markdown={post.content} />

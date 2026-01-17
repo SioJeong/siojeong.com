@@ -8,6 +8,7 @@ export interface PostInfo {
   date: string;
   tag: string[];
   description: string;
+  series?: number[];
 }
 
 export interface PostContent extends PostInfo {
@@ -59,6 +60,7 @@ export function getPostMetadata(postId: string): PostInfo | null {
       date: data.date,
       tag: data.tag || [],
       description: data.description || '',
+      series: Array.isArray(data.series) ? data.series : undefined,
     };
   } catch (error) {
     console.error(`Error reading post ${postId}:`, error);
@@ -81,6 +83,7 @@ export function getPostContent(postId: string): PostContent | null {
       date: data.date,
       tag: data.tag || [],
       description: data.description || '',
+      series: Array.isArray(data.series) ? data.series : undefined,
       content,
     };
   } catch (error) {
@@ -103,4 +106,11 @@ export function getAllPostsMetadata(): PostInfo[] {
 
   // ID 기준 내림차순 정렬
   return posts.sort((a, b) => b.id - a.id);
+}
+
+export function getSeriesPostsMetadata(seriesIds: number[]): PostInfo[] {
+  return seriesIds
+    .map((id) => getPostMetadata(String(id)))
+    .filter((post): post is PostInfo => post !== null)
+    .sort((a, b) => b.id - a.id); // ID 내림차순 정렬
 }
