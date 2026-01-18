@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/react';
 import Footer from './components/footer/Footer';
-import GoogleAnalytics from './components/GoogleAnalytics';
 import Header from './components/header/Header';
 import './globals.css';
 
@@ -20,15 +21,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  verification: {
-    google: 'vDrYh8jxtgaAV4XyZ4hXfBKz2DlUc8GIrfEtW6yyCUQ',
-    other: {
-      'naver-site-verification': [
-        '1aea5b4ec870604d406cd61448d0ae10b79cec5c',
-        '347c7a2faa70f3aa9f0431e1fcf6b71183ec11b4',
-      ],
-    },
-  },
 };
 
 export default function RootLayout({
@@ -39,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <GoogleAnalytics />
+        <GoogleAnalytics gaId="G-P6TYS1LX97" />
         <div className="root-container">
           <div className="content">
             <Header />
@@ -47,6 +39,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   );
