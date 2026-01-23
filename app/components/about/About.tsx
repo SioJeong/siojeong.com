@@ -52,7 +52,7 @@ export default function About() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Github
+              GitHub
             </a>
           </li>
           <li>
